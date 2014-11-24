@@ -1,0 +1,13 @@
+language: ruby
+
+rvm: 2.1
+
+before_install: 'echo ''gem: --no-ri --no-rdoc'' > ~/.gemrc'
+
+install: bundle install --without=integration
+
+script: bundle exec rake test
+
+branches:
+  only:
+    - master
