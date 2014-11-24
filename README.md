@@ -6,21 +6,21 @@ Installs and configures [Inspeqtor](https://github.com/mperham/inspeqtor).
 
 ### Platform:
 
-*List supported platforms here*
+* Ubuntu
 
 ### Cookbooks:
 
-*List cookbook dependencies here*
+No cookbook dependencies
 
 ## Attributes
 
-*List attributes here*
+No attributes yet
 
 ## Recipes
 
 ### inspeqtor::default
 
-*Explain what the recipe does here*
+Installs and configures Inspeqtor.
 
 ## Testing
 
