@@ -36,7 +36,6 @@ rake kitchen:default-ubuntu-1204  # Run default-ubuntu-1204 test instance
 rake kitchen:default-ubuntu-1404  # Run default-ubuntu-1404 test instance
 rake rubocop                      # Run RuboCop style and lint checks
 rake rubocop:auto_correct         # Auto-correct RuboCop offenses
-rake spec                         # Run ChefSpec examples
 rake test                         # Run all tests
 ```
 
