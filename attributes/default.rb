@@ -1,1 +1,1 @@
-# Set meaningful node attributes here
+default["inspeqtor"]["use_packagecloud_repo"] = true

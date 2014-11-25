@@ -14,7 +14,9 @@ Installs and configures [Inspeqtor](https://github.com/mperham/inspeqtor).
 
 ## Attributes
 
-No attributes yet
+* `node["inspeqtor"]["use_packagecloud_repo"]` - If true, install Inspeqtor from
+  [packagecloud repository](https://packagecloud.io/contribsys/inspeqtor). True
+  by default.
 
 ## Recipes
 
