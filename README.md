@@ -10,7 +10,7 @@ Installs and configures [Inspeqtor](https://github.com/mperham/inspeqtor).
 
 ### Cookbooks:
 
-No cookbook dependencies
+* [packagecloud](https://github.com/computology/packagecloud-cookbook)
 
 ## Attributes
 
