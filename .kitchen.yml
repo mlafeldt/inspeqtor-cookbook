@@ -18,6 +18,5 @@ platforms:
 suites:
   - name: default
     run_list:
-      - recipe[apt::default]
       - recipe[inspeqtor::default]
     attributes:
