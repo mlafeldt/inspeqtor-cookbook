@@ -7,7 +7,7 @@ package "inspeqtor"
 template "/etc/inspeqtor/inspeqtor.conf" do
   owner    "root"
   group    "root"
-  mode     "0644"
+  mode     "0600"
   notifies :reload, "service[inspeqtor]"
   variables(
     :cycle_time    => node["inspeqtor"]["cycle_time"],
