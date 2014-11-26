@@ -15,6 +15,24 @@
         "to_email": "dev@example.com",
         "from_email": "inspeqtor@example.com"
       }
+    ],
+    "service_checks": [
+      {
+        "name": "mysql",
+        "with": {
+          "username": "root",
+          "socket": "/var/run/mysqld/mysqld.sock"
+        },
+        "rules": [
+          "if memory:rss > 2g then alert",
+          "if cpu:user > 90% for 2 cycles then alert",
+          "if mysql:Queries > 100/sec for 2 cycles then alert"
+        ]
+      },
+      {
+        "name": "baz",
+        "action": "delete"
+      }
     ]
   },
   "run_list": [

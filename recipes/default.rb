@@ -4,6 +4,11 @@ end
 
 package "inspeqtor"
 
+service "inspeqtor" do
+  provider Chef::Provider::Service::Upstart
+  action   [:enable, :start]
+end
+
 template "/etc/inspeqtor/inspeqtor.conf" do
   owner    "root"
   group    "root"
@@ -17,7 +22,12 @@ template "/etc/inspeqtor/inspeqtor.conf" do
   )
 end
 
-service "inspeqtor" do
-  provider Chef::Provider::Service::Upstart
-  action   [:enable, :start]
+unless node["inspeqtor"]["service_checks"].nil?
+  node["inspeqtor"]["service_checks"].each do |check|
+    inspeqtor_service_check check["name"] do
+      with   check["with"]
+      rules  check["rules"]
+      action check["action"]
+    end
+  end
 end

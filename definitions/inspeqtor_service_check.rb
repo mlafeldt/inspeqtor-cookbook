@@ -1,11 +1,11 @@
-define :inspeqtor_service_check, :action => :create do
+define :inspeqtor_service_check do
+  params[:action] ||= :create
   service_name = params[:name]
   service_file = "/etc/inspeqtor/services.d/#{service_name}.inq"
 
-  if params[:action] == :create
-    rules = Array(params[:rules])
-
-    with_params = {}
+  case params[:action].to_sym
+  when :create
+    with_params = params[:with] || {}
     params.keys.each do |k|
       if k.to_s.start_with?("with_")
         with_params[k.to_s.sub("with_", "")] = params[k]
@@ -21,10 +21,10 @@ define :inspeqtor_service_check, :action => :create do
       variables(
         :service_name => service_name,
         :with_params  => with_params,
-        :rules        => rules,
+        :rules        => Array(params[:rules]),
       )
     end
-  elsif params[:action] == :delete
+  when :delete
     file service_file do
       action   :delete
       notifies :reload, "service[inspeqtor]"
