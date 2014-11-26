@@ -1,0 +1,7 @@
+check service <%= @service_name %>
+<% unless @with_params.empty? %>
+  with <%= @with_params.sort.map { |k, v| "#{k} \"#{v}\"" }.join(", ") %>
+<% end %>
+<% @rules.each do |rule| %>
+  <%= rule %>
+<% end %>
