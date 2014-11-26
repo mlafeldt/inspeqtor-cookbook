@@ -30,12 +30,12 @@ if node["inspeqtor"]["purge_services"]
   end
 end
 
-unless node["inspeqtor"]["service_checks"].nil?
-  node["inspeqtor"]["service_checks"].each do |check|
-    inspeqtor_service_check check["name"] do
-      with   check["with"]
-      rules  check["rules"]
-      action check["action"]
+unless node["inspeqtor"]["services"].nil?
+  node["inspeqtor"]["services"].each do |s|
+    inspeqtor_service s["name"] do
+      with   s["with"]
+      rules  s["rules"]
+      action s["action"]
     end
   end
 end

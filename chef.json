@@ -16,7 +16,7 @@
         "from_email": "inspeqtor@example.com"
       }
     ],
-    "service_checks": [
+    "services": [
       {
         "name": "mysql",
         "with": {

@@ -1,4 +1,4 @@
-define :inspeqtor_service_check do
+define :inspeqtor_service do
   params[:action] ||= :create
   service_name = params[:name]
   service_file = "#{node["inspeqtor"]["services_dir"]}/#{service_name}.inq"
