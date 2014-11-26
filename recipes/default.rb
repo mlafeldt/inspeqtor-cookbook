@@ -13,6 +13,7 @@ template "/etc/inspeqtor/inspeqtor.conf" do
     :cycle_time    => node["inspeqtor"]["cycle_time"],
     :deploy_length => node["inspeqtor"]["deploy_length"],
     :log_level     => node["inspeqtor"]["log_level"],
+    :alert_routes  => node["inspeqtor"]["alert_routes"],
   )
 end
 

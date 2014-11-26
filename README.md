@@ -25,6 +25,7 @@ Global configuration:
   in seconds.
 * `node["inspeqtor"]["log_level"]` - Set logging level. Must be one of `warn`,
   `info`, `debug`, or `verbose`.
+* `node["inspeqtor"]["alert_routes"]` - List of alert routes.
 
 See [attributes/default.rb](/attributes/default.rb) for default values.
 

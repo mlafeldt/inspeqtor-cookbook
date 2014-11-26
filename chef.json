@@ -1,0 +1,23 @@
+{
+  "inspeqtor": {
+    "alert_routes": [
+      {
+        "channel": "gmail",
+        "username": "mike",
+        "password": "fuzzbucket",
+        "to_email": "dev@example.com"
+      },
+      {
+        "channel": "mail",
+        "username": "bob",
+        "password": "foo bar baz",
+        "smtp_server": "smtp.example.com",
+        "to_email": "dev@example.com",
+        "from_email": "inspeqtor@example.com"
+      }
+    ]
+  },
+  "run_list": [
+    "recipe[inspeqtor::default]"
+  ]
+}
