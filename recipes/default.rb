@@ -26,6 +26,7 @@ if node["inspeqtor"]["purge_services"]
   directory node["inspeqtor"]["services_dir"] do
     action    :delete
     recursive true
+    notifies  :reload, "service[inspeqtor]"
   end
 end
 
