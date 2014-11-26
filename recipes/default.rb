@@ -22,6 +22,13 @@ template "/etc/inspeqtor/inspeqtor.conf" do
   )
 end
 
+if node["inspeqtor"]["purge_services"]
+  directory "/etc/inspeqtor/services.d" do
+    action    :delete
+    recursive true
+  end
+end
+
 unless node["inspeqtor"]["service_checks"].nil?
   node["inspeqtor"]["service_checks"].each do |check|
     inspeqtor_service_check check["name"] do

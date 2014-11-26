@@ -1,4 +1,5 @@
 default["inspeqtor"]["use_packagecloud_repo"] = true
+default["inspeqtor"]["purge_services"] = false
 
 # Global configuration
 default["inspeqtor"]["cycle_time"]    = 15

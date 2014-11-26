@@ -12,6 +12,13 @@ define :inspeqtor_service_check do
       end
     end
 
+    directory "/etc/inspeqtor/services.d" do
+      owner     "root"
+      group     "root"
+      action    :create
+      recursive true
+    end
+
     template service_file do
       source   "service.inq.erb"
       owner    "root"
