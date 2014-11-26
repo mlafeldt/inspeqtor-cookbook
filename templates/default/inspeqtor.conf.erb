@@ -5,7 +5,7 @@
 set cycle_time <%= @cycle_time %>
 set deploy_length <%= @deploy_length %>
 set log_level <%= @log_level %>
-
 <% Array(@alert_routes).each do |route| %>
+
 <%= inspeqtor_alert_route(route) %>
 <% end %>

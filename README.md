@@ -25,7 +25,9 @@ Global configuration:
   in seconds.
 * `node["inspeqtor"]["log_level"]` - Set logging level. Must be one of `warn`,
   `info`, `debug`, or `verbose`.
-* `node["inspeqtor"]["alert_routes"]` - List of alert routes.
+* `node["inspeqtor"]["alert_routes"]` - List of alert routes. Each route
+  contains the channel type, an optional owner, as well other channel-specific
+  settings. See examples in [chef.json](/chef.json).
 
 See [attributes/default.rb](/attributes/default.rb) for default values.
 
