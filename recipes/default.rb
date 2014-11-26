@@ -9,7 +9,7 @@ service "inspeqtor" do
   action   [:enable, :start]
 end
 
-template "/etc/inspeqtor/inspeqtor.conf" do
+template "#{node["inspeqtor"]["conf_dir"]}/inspeqtor.conf" do
   owner    "root"
   group    "root"
   mode     "0600"
@@ -23,7 +23,7 @@ template "/etc/inspeqtor/inspeqtor.conf" do
 end
 
 if node["inspeqtor"]["purge_services"]
-  directory "/etc/inspeqtor/services.d" do
+  directory node["inspeqtor"]["services_dir"] do
     action    :delete
     recursive true
   end

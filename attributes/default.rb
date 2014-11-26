@@ -1,3 +1,6 @@
+default["inspeqtor"]["conf_dir"]     = "/etc/inspeqtor"
+default["inspeqtor"]["services_dir"] = "/etc/inspeqtor/services.d"
+
 default["inspeqtor"]["use_packagecloud_repo"] = true
 default["inspeqtor"]["purge_services"] = false
 

@@ -1,7 +1,7 @@
 define :inspeqtor_service_check do
   params[:action] ||= :create
   service_name = params[:name]
-  service_file = "/etc/inspeqtor/services.d/#{service_name}.inq"
+  service_file = "#{node["inspeqtor"]["services_dir"]}/#{service_name}.inq"
 
   case params[:action].to_sym
   when :create
@@ -12,9 +12,10 @@ define :inspeqtor_service_check do
       end
     end
 
-    directory "/etc/inspeqtor/services.d" do
+    directory node["inspeqtor"]["services_dir"] do
       owner     "root"
       group     "root"
+      mode      "0755"
       action    :create
       recursive true
     end
