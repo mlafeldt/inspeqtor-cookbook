@@ -1,5 +1,8 @@
 # Inspeqtor Cookbook
 
+**Note: This cookbook is still in beta. Some of Inspeqtor's features cannot be
+configured yet.**
+
 Installs and configures [Inspeqtor](https://github.com/mperham/inspeqtor).
 
 ## Requirements
