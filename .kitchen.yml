@@ -8,12 +8,12 @@ provisioner:
 platforms:
   - name: ubuntu-12.04
     driver:
-      box: hashicorp/precise64
-      box_url: https://vagrantcloud.com/hashicorp/precise64/version/2/provider/virtualbox.box
+      box: ubuntu/precise64
+      box_url: https://vagrantcloud.com/ubuntu/boxes/precise64/versions/12.04.4/providers/virtualbox.box
   - name: ubuntu-14.04
     driver:
       box: ubuntu/trusty64
-      box_url: https://vagrantcloud.com/ubuntu/trusty64/version/1/provider/virtualbox.box
+      box_url: https://vagrantcloud.com/ubuntu/boxes/trusty64/versions/14.04/providers/virtualbox.box
 
 suites:
   - name: default
