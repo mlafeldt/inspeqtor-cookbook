@@ -8,7 +8,7 @@
         "to_email": "dev@example.com"
       },
       {
-        "channel": "mail",
+        "channel": "email",
         "username": "bob",
         "password": "foo bar baz",
         "smtp_server": "smtp.example.com",
